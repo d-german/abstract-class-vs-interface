@@ -4,7 +4,7 @@
     {
         private static void Main()
         {
-           Base b = new BaseImpl();
+           IBase b = new BaseImpl();
 
            b.MethodA();
            b.MethodB();

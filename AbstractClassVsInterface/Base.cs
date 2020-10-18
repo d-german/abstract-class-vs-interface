@@ -2,21 +2,22 @@
 
 namespace AbstractClassVsInterface
 {
-    public abstract class Base
+    public interface IBase
     {
-        public abstract void MethodA();
-
-        public virtual void MethodB()
-        {
-            Console.WriteLine($"{nameof(MethodB)} implementation");
-        }
+        void MethodA();
+        void MethodB();
     }
 
-    public class BaseImpl : Base
+    public class BaseImpl : IBase
     {
-        public override void MethodA()
+        public void MethodA()
         {
             Console.WriteLine($"{nameof(MethodA)} implementation");
+        }
+
+        public void MethodB()
+        {
+            Console.WriteLine($"{nameof(MethodB)} implementation");
         }
     }
 }
